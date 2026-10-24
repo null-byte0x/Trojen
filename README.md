@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:050505,40:0a0a2e,75:1a1a6e,100:4444ff&height=240&section=header&text=applet_killer_power&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Linux%20Thread%20Cancellation%20%7C%20C11%20%7C%20Systems%20Research&descSize=13&descAlignY=62" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:050505,40:0a0a2e,75:1a1a6e,100:4444ff&height=240&section=header&text=main.c&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Linux%20Thread%20Cancellation%20%7C%20C11%20%7C%20Systems%20Research&descSize=13&descAlignY=62" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=17&duration=2000&pause=700&color=4499ff&center=true&vCenter=true&width=820&lines=%24+cc+-std%3Dc11+-Wall+-pthread+-O2+-o+applet_killer_power;%5B%2B%5D+sweeping+%2Fproc%2Fself%2Ftask...;%5B%2B%5D+cancelling+threads...;%5B!%5D+escalating+to+SIGKILL;%5B%E2%9C%93%5D+all+threads+stopped)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=17&duration=2000&pause=700&color=4499ff&center=true&vCenter=true&width=820&lines=%24+cc+-std%3Dc11+-Wall+-pthread+-O2+-o+main;%5B%2B%5D+sweeping+%2Fproc%2Fself%2Ftask...;%5B%2B%5D+cancelling+threads...;%5B!%5D+escalating+to+SIGKILL;%5B%E2%9C%93%5D+all+threads+stopped)](https://git.io/typing-svg)
 
 ![Language](https://img.shields.io/badge/Language-C11-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -19,7 +19,7 @@
 
 ## `$ cat overview.md`
 
-**applet_killer_power** is a C11 research demo that faithfully reproduces Java's *"stop every thread in the VM"* behaviour on Linux — the mechanism historically used by the deprecated `Thread.stop()` and the JVM shutdown sequence.
+**main.c** is a C11 research demo that faithfully reproduces Java's *"stop every thread in the VM"* behaviour on Linux — the mechanism historically used by the deprecated `Thread.stop()` and the JVM shutdown sequence.
 
 It answers a concrete systems question:
 
@@ -99,7 +99,7 @@ This mirrors what the JVM does at the native layer when all else fails.
 
 ```bash
 cc -std=c11 -Wall -Wextra -pthread -O2 \
-   -o applet_killer_power applet_killer_power.c
+   -o main main.c
 ```
 
 | Flag | Purpose |
@@ -112,7 +112,7 @@ cc -std=c11 -Wall -Wextra -pthread -O2 \
 ### Run
 
 ```bash
-./applet_killer_power
+./main
 ```
 
 Expected output:
